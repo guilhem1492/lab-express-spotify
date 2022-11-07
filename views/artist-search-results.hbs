@@ -1,0 +1,19 @@
+<h1>Artist Search Results</h1>
+
+<div class="container">
+
+  {{#each artists}}
+
+    <div class="card" style="background-color:{{this.color}} ;">
+      <picture>
+        <img src="{{this.images.0.url}}" alt="{{this.name}}" />
+      </picture>
+      <p>Name: {{this.name}}</p>
+      <p>Id: {{this.id}}</p>
+
+      <p><a href="/albums/{{this.id}}">Albums</a></p>
+    </div>
+
+  {{/each}}
+
+</div>
